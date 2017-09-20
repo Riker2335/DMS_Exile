@@ -44,7 +44,6 @@ if !(_OK) exitWith
 _PossibleDifficulty		= 	[
 								"easy",
 								"moderate",
-								"moderate",
 								"difficult",
 								"difficult",
 								"difficult",
@@ -66,12 +65,12 @@ switch (_difficulty) do
 {
 	case "easy":
 	{
-		_msgWIN = ['#0080ff',"Convicts killed everyone and made off with the Ifrit"];
+		_msgWIN = ['#0080ff',"Convicts killed everyone and made off with the Ifrit, entry code %1...",_pinCode"];
 		_AICount = (4 + (round (random 4)));
 		_crate_weapons 		= (2 + (round (random 2)));
 		_crate_items 		= (4 + (round (random 4)));
 		_crate_backpacks 	= (1 + (round (random 2)));
-		_vehicle = ["Exile_Car_Ifrit",[(_pos select 0) -30, (_pos select 1) -30]] call DMS_fnc_SpawnNonPersistentVehicle;
+		_vehicle = ["Exile_Car_Ifrit",[(_pos select 0) -30, (_pos select 1) -30]] call DMS_fnc_SpawnPersistentVehicle;
 	};
 
 	case "moderate":
@@ -80,16 +79,8 @@ switch (_difficulty) do
 		_crate_weapons 		= (3 + (round (random 3)));
 		_crate_items 		= (6 + (round (random 4)));
 		_crate_backpacks 	= (2 + (round (random 2)));
-		// Do coin toss calculation for vehicle and message
-		if ((round (random 1)) isEqualTo 0) then
-		{
-			_vehicle = ["Exile_Car_Ifrit",[(_pos select 0) -30, (_pos select 1) -30]] call DMS_fnc_SpawnNonPersistentVehicle;
-			_msgWIN = ['#0080ff',"Convicts killed everyone and made off with the Ifrit"];
-		}
-		else
-		{
-			_vehicle = ["Exile_Car_Ifrit",[(_pos select 0) -30, (_pos select 1) -30],_pinCode] call DMS_fnc_SpawnPersistentVehicle;
-			_msgWIN = ['#0080ff',format ["Convicts killed everyone and made off with the Ifrit, entry code %1...",_pinCode]];
+		_vehicle = ["Exile_Car_Ifrit",[(_pos select 0) -30, (_pos select 1) -30],_pinCode] call DMS_fnc_SpawnPersistentVehicle;
+		_msgWIN = ['#0080ff',format ["Convicts killed everyone and made off with the Ifrit, entry code %1...",_pinCode]];
 		};
 	};
 
@@ -111,7 +102,7 @@ switch (_difficulty) do
 		_crate_weapons 		= (5 + (round (random 5)));
 		_crate_items 		= (8 + (round (random 8)));
 		_crate_backpacks 	= (4 + (round (random 2)));
-		_vehicle = ["Exile_Car_Ifrit",[(_pos select 0) -30, (_pos select 1) -30],_pinCode] call DMS_fnc_SpawnPersistentVehicle;
+		_vehicle = ["O_MRAP_02_hmg_F",[(_pos select 0) -30, (_pos select 1) -30],_pinCode] call DMS_fnc_SpawnPersistentVehicle;
 	};
 };
 
