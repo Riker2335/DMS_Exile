@@ -5,7 +5,7 @@
 	easy/mod/difficult/hardcore - reworked by [CiC]red_ned http://cic-gaming.co.uk
 */
 
-private ["_num", "_side", "_pos", "_OK", "_difficulty", "_extraParams", "_AICount", "_group", "_type", "_launcher", "_staticGuns", "_wreck", "_crate", "_crate1", "_vehicle", "_pinCode", "_class", "_veh", "_crate_loot_values", "_crate_loot_values1", "_missionAIUnits", "_missionObjs", "_msgStart", "_msgWIN", "_msgLOSE", "_missionName", "_markers", "_time", "_added", "_cleanup", "_baseObjs", "_crate_weapons", "_crate_weapon_list", "_crate_items", "_crate_item_list", "_crate_backpacks", "_PossibleDifficulty"];
+private ["_PossibleVehicleClass", "_VehicleClass", "_num", "_side", "_pos", "_OK", "_difficulty", "_extraParams", "_AICount", "_group", "_type", "_launcher", "_staticGuns", "_wreck", "_crate", "_crate1", "_vehicle", "_pinCode", "_class", "_veh", "_crate_loot_values", "_crate_loot_values1", "_missionAIUnits", "_missionObjs", "_msgStart", "_msgWIN", "_msgLOSE", "_missionName", "_markers", "_time", "_added", "_cleanup", "_baseObjs", "_crate_weapons", "_crate_weapon_list", "_crate_items", "_crate_item_list", "_crate_backpacks", "_PossibleDifficulty"];
 
 // For logging purposes
 _num = DMS_MissionCount;
@@ -45,8 +45,6 @@ if !(_OK) exitWith
 
 //create possible difficulty add more of one difficulty to weight it towards that
 _PossibleDifficulty		= 	[
-								"easy",
-								"moderate",
 								"moderate",
 								"difficult",
 								"difficult",
@@ -64,17 +62,24 @@ _difficulty = selectRandom _PossibleDifficulty;
 //vehicle pin code choice - doing early as its used in win message and vehicle spawn
 _pinCode = (1000 +(round (random 8999)));
 
+_PossibleVehicleClass =
+[
+		"Exile_Car_Hunter",
+		"ZHunters_Hunt_LFDA",
+		"ZHunters_Huntmed"
+];
+_VehicleClass = selectRandom _PossibleVehicleClass;
 
 switch (_difficulty) do
 {
 	case "easy":
 	{
-		_msgWIN = ['#0080ff',"Convicts killed everyone and made off with the Hunter"];
+		_msgWIN = ['#0080ff',"Convicts killed everyone and made off with the Hunter, entry code %1...",_pinCode"];
 		_AICount = (4 + (round (random 4)));
 		_crate_weapons 		= (2 + (round (random 2)));
 		_crate_items 		= (4 + (round (random 4)));
 		_crate_backpacks 	= (1 + (round (random 2)));
-		_vehicle = ["Exile_Car_Hunter",[(_pos select 0) -30, (_pos select 1) -30]] call DMS_fnc_SpawnNonPersistentVehicle;
+		_vehicle = [_VehicleClass,[(_pos select 0) -30, (_pos select 1) -30]] call DMS_fnc_SpawnPersistentVehicle;
 	};
 
 	case "moderate":
@@ -83,16 +88,8 @@ switch (_difficulty) do
 		_crate_weapons 		= (3 + (round (random 3)));
 		_crate_items 		= (6 + (round (random 4)));
 		_crate_backpacks 	= (2 + (round (random 2)));
-		// Do coin toss calculation for vehicle and message
-		if ((round (random 1)) isEqualTo 0) then
-		{
-			_vehicle = ["Exile_Car_Hunter",[(_pos select 0) -30, (_pos select 1) -30]] call DMS_fnc_SpawnNonPersistentVehicle;
-			_msgWIN = ['#0080ff',"Convicts killed everyone and made off with the Hunter"];
-		}
-		else
-		{
-			_vehicle = ["Exile_Car_Hunter",[(_pos select 0) -30, (_pos select 1) -30],_pinCode] call DMS_fnc_SpawnPersistentVehicle;
-			_msgWIN = ['#0080ff',format ["Convicts killed everyone and made off with the Hunter, entry code %1...",_pinCode]];
+		_vehicle = [_VehicleClass,[(_pos select 0) -30, (_pos select 1) -30],_pinCode] call DMS_fnc_SpawnPersistentVehicle;
+		_msgWIN = ['#0080ff',format ["Convicts killed everyone and made off with the Hunter, entry code %1...",_pinCode]];
 		};
 	};
 
@@ -103,7 +100,7 @@ switch (_difficulty) do
 		_crate_weapons 		= (4 + (round (random 4)));
 		_crate_items 		= (6 + (round (random 6)));
 		_crate_backpacks 	= (3 + (round (random 2)));
-		_vehicle = ["Exile_Car_Hunter",[(_pos select 0) -30, (_pos select 1) -30],_pinCode] call DMS_fnc_SpawnPersistentVehicle;
+		_vehicle = [_VehicleClass,[(_pos select 0) -30, (_pos select 1) -30],_pinCode] call DMS_fnc_SpawnPersistentVehicle;
 	};
 
 	//case "hardcore":
@@ -114,7 +111,7 @@ switch (_difficulty) do
 		_crate_weapons 		= (5 + (round (random 5)));
 		_crate_items 		= (8 + (round (random 8)));
 		_crate_backpacks 	= (4 + (round (random 2)));
-		_vehicle = ["Exile_Car_Hunter",[(_pos select 0) -30, (_pos select 1) -30],_pinCode] call DMS_fnc_SpawnPersistentVehicle;
+		_vehicle = [_VehicleClass,[(_pos select 0) -30, (_pos select 1) -30],_pinCode] call DMS_fnc_SpawnPersistentVehicle;
 	};
 };
 
