@@ -151,7 +151,7 @@ if (_difficulty isEqualTo "hardcore") then
 {
 	_pinCode = (1000 +(round (random 8999)));
 	_vehicle = ["Exile_Car_Ural_Covered_Yellow",[(_pos select 0) -30, (_pos select 1) -0],_pinCode] call DMS_fnc_SpawnPersistentVehicle;
-	_msgWIN = ['#0080ff',format ["Convicts have taken over the research camp, vehicle entry code is %1...",_pinCode]];
+	_msgWIN = ['#0080ff',format ["Convicts have taken over the research camp, vehicle PIN is %1...",_pinCode]];
 }
 else
 {
@@ -182,8 +182,8 @@ _missionAIUnits =
 _missionObjs =
 [
 	_staticGuns+_baseObjs+[_veh],			// armed AI vehicle, base objects, and static guns
-	[_vehicle],								//this is prize vehicle
-	[[_crate1,_crate_loot_values1]]			//this is prize crate
+	[_vehicle],								// Prize Vehicle
+	[[_crate1,_crate_loot_values1]]			// this is prize crate
 ];
 
 // define start messages in difficulty choice
