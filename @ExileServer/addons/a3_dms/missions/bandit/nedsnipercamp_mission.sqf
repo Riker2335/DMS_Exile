@@ -62,9 +62,9 @@ switch (_difficulty) do
 	{
 		_AICount = (4 + (round (random 4)));
 		_crate_weapons 		= (4 + (round (random 2)));
-		_crate_weapon_list	= ["arifle_MXM_Black_F","srifle_DMR_01_F","srifle_EBR_F","srifle_GM6_camo_F","srifle_LRR_camo_F"];
-		_crate_items 		= (8 + (round (random 3)));
-		_crate_item_list	= ["10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","100Rnd_65x39_caseless_mag","10Rnd_127x54_Mag","16Rnd_9x21_Mag","30Rnd_65x39_caseless_mag","30Rnd_556x45_Stanag"];
+		_crate_weapon_list	= ["arifle_MXM_Black_F","srifle_DMR_01_F","srifle_EBR_F","srifle_GM6_camo_F","srifle_LRR_camo_F","CUP_srifle_M110"];
+		_crate_items 		= (12 + (round (random 3)));
+		_crate_item_list	= ["10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","100Rnd_65x39_caseless_mag","10Rnd_127x54_Mag","16Rnd_9x21_Mag","30Rnd_65x39_caseless_mag","30Rnd_556x45_Stanag","CUP_20Rnd_TE1_Green_Tracer_762x51_M110"];
 		_crate_backpacks 	= (1 + (round (random 1)));
 	};
 
@@ -73,9 +73,9 @@ switch (_difficulty) do
 		_AICount = (6 + (round (random 4)));
 		_msgStart = ['#FFFF00',"Snipers have set up a moderate training camp, go steal their rifles"];
 		_crate_weapons 		= (6 + (round (random 2)));
-		_crate_weapon_list	= ["arifle_MXM_Black_F","srifle_DMR_01_F","srifle_EBR_F","srifle_GM6_camo_F","srifle_LRR_camo_F"];
-		_crate_items 		= (10 + (round (random 3)));
-		_crate_item_list	= ["10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","100Rnd_65x39_caseless_mag","10Rnd_127x54_Mag","16Rnd_9x21_Mag","30Rnd_65x39_caseless_mag","30Rnd_556x45_Stanag"];
+		_crate_weapon_list	= ["arifle_MXM_Black_F","srifle_DMR_01_F","srifle_EBR_F","srifle_GM6_camo_F","srifle_LRR_camo_F","CUP_srifle_M110"];
+		_crate_items 		= (15 + (round (random 3)));
+		_crate_item_list	= ["10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","100Rnd_65x39_caseless_mag","10Rnd_127x54_Mag","16Rnd_9x21_Mag","30Rnd_65x39_caseless_mag","30Rnd_556x45_Stanag","CUP_20Rnd_TE1_Green_Tracer_762x51_M110"];
 		_crate_backpacks 	= (2 + (round (random 1)));
 	};
 
@@ -84,9 +84,9 @@ switch (_difficulty) do
 	_AICount = (8 + (round (random 4)));
 	_msgStart = ['#FFFF00',"Snipers have set up a difficult training camp, go steal their rifles"];
 	_crate_weapons 		= (9 + (round (random 2)));
-	_crate_weapon_list	= ["srifle_DMR_03_khaki_F","srifle_DMR_03_tan_F","srifle_DMR_03_woodland_F","srifle_DMR_05_blk_F","srifle_DMR_05_hex_F","srifle_DMR_06_camo_F","srifle_DMR_06_olive_F","srifle_EBR_F","srifle_GM6_camo_F","srifle_LRR_camo_F"];
-	_crate_items 		= (14 + (round (random 3)));
-	_crate_item_list	= ["10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","100Rnd_65x39_caseless_mag","10Rnd_127x54_Mag","16Rnd_9x21_Mag","100Rnd_65x39_caseless_mag","10Rnd_127x54_Mag","16Rnd_9x21_Mag","30Rnd_65x39_caseless_mag","30Rnd_556x45_Stanag"];
+	_crate_weapon_list	= ["srifle_DMR_03_khaki_F","srifle_DMR_03_tan_F","srifle_DMR_03_woodland_F","srifle_DMR_05_blk_F","srifle_DMR_05_hex_F","srifle_DMR_06_camo_F","srifle_DMR_06_olive_F","srifle_EBR_F","srifle_GM6_camo_F","srifle_LRR_camo_F","CUP_srifle_M110"];
+	_crate_items 		= (20 + (round (random 3)));
+	_crate_item_list	= ["10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","100Rnd_65x39_caseless_mag","10Rnd_127x54_Mag","16Rnd_9x21_Mag","100Rnd_65x39_caseless_mag","10Rnd_127x54_Mag","16Rnd_9x21_Mag","30Rnd_65x39_caseless_mag","30Rnd_556x45_Stanag","CUP_20Rnd_TE1_Green_Tracer_762x51_M110"];
 	_crate_backpacks 	= (3 + (round (random 1)));
 	};
 
@@ -94,11 +94,11 @@ switch (_difficulty) do
 	default
 	{
 		_AICount = (8 + (round (random 8)));
-		_msgStart = ['#FFFF00',"Snipers have set up an advanced training camp, go steal their rifles"];
+		_msgStart = ['#FFFF00',"Snipers have set up a hardcore training camp, go steal their rifles"];
 		_crate_weapons 		= (14 + (round (random 2)));
-		_crate_weapon_list	= ["srifle_DMR_02_camo_F","srifle_DMR_02_sniper_F","srifle_DMR_03_khaki_F","srifle_DMR_03_multicam_F","srifle_DMR_03_woodland_F","srifle_DMR_04_F","srifle_DMR_04_Tan_F","srifle_DMR_05_blk_F","srifle_DMR_05_hex_F","srifle_DMR_05_tan_f","srifle_DMR_06_camo_F","srifle_DMR_06_olive_F","srifle_EBR_F","srifle_GM6_camo_F","srifle_LRR_camo_F"];
-		_crate_items 		= (17 + (round (random 3)));
-		_crate_item_list	= ["10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","100Rnd_65x39_caseless_mag","10Rnd_127x54_Mag","16Rnd_9x21_Mag","100Rnd_65x39_caseless_mag","10Rnd_127x54_Mag","16Rnd_9x21_Mag","30Rnd_65x39_caseless_mag","16Rnd_9x21_Mag","100Rnd_65x39_caseless_mag","10Rnd_127x54_Mag","16Rnd_9x21_Mag","30Rnd_65x39_caseless_mag","30Rnd_556x45_Stanag"];
+		_crate_weapon_list	= ["srifle_DMR_02_camo_F","srifle_DMR_02_sniper_F","srifle_DMR_03_khaki_F","srifle_DMR_03_multicam_F","srifle_DMR_03_woodland_F","srifle_DMR_04_F","srifle_DMR_04_Tan_F","srifle_DMR_05_blk_F","srifle_DMR_05_hex_F","srifle_DMR_05_tan_f","srifle_DMR_06_camo_F","srifle_DMR_06_olive_F","srifle_EBR_F","srifle_GM6_camo_F","srifle_LRR_camo_F","CUP_srifle_M110"];
+		_crate_items 		= (30 + (round (random 3)));
+		_crate_item_list	= ["10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","10Rnd_93x64_DMR_05_Mag","100Rnd_65x39_caseless_mag","10Rnd_127x54_Mag","16Rnd_9x21_Mag","100Rnd_65x39_caseless_mag","10Rnd_127x54_Mag","16Rnd_9x21_Mag","30Rnd_65x39_caseless_mag","16Rnd_9x21_Mag","100Rnd_65x39_caseless_mag","10Rnd_127x54_Mag","16Rnd_9x21_Mag","30Rnd_65x39_caseless_mag","30Rnd_556x45_Stanag","CUP_20Rnd_TE1_Green_Tracer_762x51_M110"];
 		_crate_backpacks 	= (4 + (round (random 1)));
 	};
 };
