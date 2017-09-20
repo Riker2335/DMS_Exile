@@ -152,7 +152,20 @@ _PossibleVehicleClass 		= [
 								"Exile_Chopper_Hummingbird_Civillian_Sunset",
 								"Exile_Chopper_Hummingbird_Civillian_Vrana",
 								"Exile_Chopper_Hummingbird_Civillian_Wasp",
-								"Exile_Chopper_Hummingbird_Civillian_Wave"
+								"Exile_Chopper_Hummingbird_Civillian_Wave",
+								"Exile_Chopper_Orca_BlackCustom",
+								"Exile_Chopper_Orca_BlackCustom",
+								"B_Heli_Transport_01_camo_F",
+								"B_Heli_Transport_01_camo_F",
+								"Exile_Chopper_Mohawk_FIA",
+								"Exile_Chopper_Huron_Black",
+								"Exile_Chopper_Hellcat_Green",
+								"Exile_Chopper_Taru_Transport_Black",
+								"CUP_B_UH60M_Unarmed_US",
+								"I_Heli_Light_03_F_Hunter",
+								"I_Heli_Light_04_F_Hunter",
+								"I_Heli_Hellcat_Unarmed_Hunter",
+								"I_Heli_Transport_02_F_Hunter"
 							];
 //choose the vehicle
 _VehicleClass = selectRandom _PossibleVehicleClass;
