@@ -134,9 +134,9 @@ _staticGuns =
 
 //create possible vehicle list
 
-// If hardcore give possibility of better car
+// If difficult give possibility of better car
 _PossibleVehicleClass =
-	if (_difficulty isEqualTo "hardcore") then
+	if (_difficulty isEqualTo "difficult") then
 	{
 		[
 			"Exile_Car_SUVXL_Black",
@@ -146,13 +146,13 @@ _PossibleVehicleClass =
 			"Exile_Car_Hatchback_Sport_White",
 			"Exile_Car_Hatchback_Sport_Beige",
 			"Exile_Car_Hatchback_Sport_Green",
-			"Exile_Car_Lada_Green",
-			"Exile_Car_Lada_Red",
-			"Exile_Car_Lada_White",
-			"Exile_Car_Lada_Hipster",
-			"Exile_Car_Volha_Blue",
-			"Exile_Car_Volha_White",
-			"Exile_Car_Volha_Black"
+			"Exile_Car_SUV_Armed_Black",
+			"Exile_Car_BRDM2_HQ",
+			"Exile_Car_HMMWV_M134_Green",
+			"Exile_Car_HMMWV_M2_Green",
+			"Exile_Car_Van_Box_Black",
+			"Exile_Car_Van_Box_White",
+			"Exile_Car_Van_Box_Red"
 		];
 	}
 	else
@@ -165,7 +165,14 @@ _PossibleVehicleClass =
 			"Exile_Car_Lada_Hipster",
 			"Exile_Car_Volha_Blue",
 			"Exile_Car_Volha_White",
-			"Exile_Car_Volha_Black"
+			"Exile_Car_Volha_Black",
+			"Exile_Car_Hatchback_Rusty1",
+			"Exile_Car_Hatchback_Rusty2",
+			"Exile_Car_Hatchback_Rusty3",
+			"Exile_Car_Offroad_Rusty1",
+			"Exile_Car_Offroad_Rusty2",
+			"Exile_Car_Offroad_Rusty3",
+			"Exile_Car_BTR40_Green"
 		];
 	};
 
@@ -173,9 +180,8 @@ _PossibleVehicleClass =
 _VehicleClass = selectRandom _PossibleVehicleClass;
 
 
-// DMS_fnc_SpawnPersistentVehicle will automatically turn the pincode into a string and format it.
-// Generate a pincode greater than 1000 because we shouldn't waste time having to format it in the mission messages.
-_pinCode = 1000 + round (random 8999);
+//DMS_fnc_SpawnPersistentVehicle will automatically turn the pincode into a string and format it.
+_pinCode = round (random 9999);
 _vehicle = [_VehicleClass, _pos getPos [30, random 360], _pinCode] call DMS_fnc_SpawnPersistentVehicle;
 
 
@@ -207,10 +213,10 @@ _missionObjs =
 ];
 
 // Define Mission start message
-_msgStart = ['#FFFF00',"Terrorists with an old car have broken down. Go kill them and steal the car"];
+_msgStart = ['#FFFF00',"Terrorists with car have broken down. Go kill them and steal the car"];
 
 // Define Mission Win message
-_msgWIN = ['#0080ff',format ["Convicts killed everyone and made off with the old car, entry code %1...",_pinCode]];
+_msgWIN = ['#0080ff',format ["Convicts killed everyone and made off with the car, entry code %1...",_pinCode]];
 
 // Define Mission Lose message
 _msgLOSE = ['#FF0000',"The attackers drove off and escaped attack."];
