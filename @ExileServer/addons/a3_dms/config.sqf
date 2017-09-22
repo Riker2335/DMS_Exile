@@ -22,13 +22,13 @@
 //#define GIVE_AI_APEX_WEAPONS 1
 
 // Uncomment this if you want Apex gear on AI. Uniforms, Vests, Backpacks, Helmets,Scopes
-//#define GIVE_AI_APEX_GEAR 1
+#define GIVE_AI_APEX_GEAR 1
 
 // Uncomment this if you want Apex weapons in loot crates
-//#define USE_APEX_WEAPONS_IN_CRATES 1
+#define USE_APEX_WEAPONS_IN_CRATES 1
 
 // Uncomment this if you want Apex vehicles to spawn for AI/missions
-//#define USE_APEX_VEHICLES 1
+#define USE_APEX_VEHICLES 1
 
 
 
@@ -40,12 +40,12 @@ DMS_Use_Map_Config = true;	// Whether or not to use config overwrites specific t
 	For any questions regarding map-specific configs, please leave a reply in the DMS thread on the Exile forums.
 */
 
-DMS_Enable_RankChange = false; // Whether or not to use Rank Changes. (Required 'true' if using Occupation)
+DMS_Enable_RankChange = true; // Whether or not to use Rank Changes. (Required 'true' if using Occupation)
 /*
 	I am sharing this upgrade to all. If you utilize GR8 Humanity (fully compatible) or a custom version of a ranking system(simple variable changes), this will allow your players to score +/- for Bandit and Hero kills as well as a custom Survivor Faction added to DMS as well. You can still utilize the HERO / BANDIT / SURVIVOR respect and poptab settings for gameplay :) ENJOY! DONKEYPUNCH.INFO!
 */
 
-DMS_Add_AIKill2DB = false;  // Adds killstat for player in the database ;)
+DMS_Add_AIKill2DB = true;  // Adds killstat for player in the database ;)
 
 DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a scheduled environment. Setting to true may help with lag when certain missions spawn.
 
@@ -53,10 +53,10 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	/*General settings for dynamic missions*/
 	DMS_DynamicMission					= true;						// Enable/disable dynamic mission system.
 	DMS_MaxBanditMissions				= 3;						// Maximum number of Bandit Missions running at the same time
-	DMS_TimeToFirstMission				= [180,420];				// [Minimum,Maximum] time between first mission spawn. | DEFAULT: 3-7 minutes.
-	DMS_TimeBetweenMissions				= [600,900];				// [Minimum,Maximum] time between missions (if mission limit is not reached) | DEFAULT: 10-15 mins
-	DMS_MissionTimeout					= [900,1800]; 				// [Minimum,Maximum] time it will take for a mission to timeout | DEFAULT: 15-30 mins
-	DMS_MissionTimeoutResetRange		= 1500;						// If a player is this close to a mission then it won't time-out. Set to 0 to disable this check.
+	DMS_TimeToFirstMission				= [120,300];				// [Minimum,Maximum] time between first mission spawn. | DEFAULT: 3-7 minutes.
+	DMS_TimeBetweenMissions				= [300,900];				// [Minimum,Maximum] time between missions (if mission limit is not reached) | DEFAULT: 10-15 mins
+	DMS_MissionTimeout					= [900,2400]; 				// [Minimum,Maximum] time it will take for a mission to timeout | DEFAULT: 15-30 mins
+	DMS_MissionTimeoutResetRange		= 1600;						// If a player is this close to a mission then it won't time-out. Set to 0 to disable this check.
 	DMS_MissionTimeoutResetFrequency	= 180;						// How often (in seconds) to check for nearby players and reset the mission timeout.
 	DMS_ResetMissionTimeoutOnKill		= true;						// Whether or not to reset the mission timeout when an AI is killed.
 	/*General settings for dynamic missions*/
@@ -66,16 +66,16 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_MaxStaticMissions				= 1;						// Maximum number of Static Missions running at the same time. It's recommended you set this to the same amount of static missions that you have in total. This config will be ignored by "DMS_StaticMissionsOnServerStart".
 	DMS_TimeToFirstStaticMission		= [30,30];					// [Minimum,Maximum] time between first static mission spawn. | DEFAULT: 3-7 minutes.
 	DMS_TimeBetweenStaticMissions		= [900,1800];				// [Minimum,Maximum] time between static missions (if static mission limit is not reached) | DEFAULT: 15-30 mins
-	DMS_StaticMissionTimeOut			= [1800,3600]; 				// [Minimum,Maximum] time it will take for a static mission to timeout | DEFAULT: 30-60 mins
-	DMS_StaticMissionTimeoutResetRange	= 1500;						// If a player is this close to a mission then it won't time-out. Set to 0 to disable this check.
-	DMS_SMissionTimeoutResetFrequency	= 180;						// How often (in seconds) to check for nearby players and reset the mission timeout for static missions.
+	DMS_StaticMissionTimeOut			= [2400,3600]; 				// [Minimum,Maximum] time it will take for a static mission to timeout | DEFAULT: 30-60 mins
+	DMS_StaticMissionTimeoutResetRange	= 1600;						// If a player is this close to a mission then it won't time-out. Set to 0 to disable this check.
+	DMS_SMissionTimeoutResetFrequency	= 300;						// How often (in seconds) to check for nearby players and reset the mission timeout for static missions.
 	DMS_ResetStaticMissionTimeoutOnKill	= true;						// Whether or not to reset the mission timeout when an AI is killed (for Static Missions).
-	DMS_StaticMinPlayerDistance			= 1500;						// If a player is this close to a mission location, then it won't spawn the mission and will wait 60 seconds before attempting to spawn it.
+	DMS_StaticMinPlayerDistance			= 900;						// If a player is this close to a mission location, then it won't spawn the mission and will wait 60 seconds before attempting to spawn it.
 	DMS_AllowStaticReinforcements		= true;						// Whether or not static missions will receive reinforcements. This will simply disable the calling of GroupReinforcementsMonitor;
 	DMS_SpawnFlareOnReinforcements		= true;						// Whether or not to spawn a flare and noise when AI reinforcements have spawned.
 	/*General settings for static missions*/
 
-	DMS_playerNearRadius				= 100;						// How close a player has to be to a mission in order to satisfy the "playerNear" mission requirement (can be customized per mission).
+	DMS_playerNearRadius				= 200;						// How close a player has to be to a mission in order to satisfy the "playerNear" mission requirement (can be customized per mission).
 
 	DMS_AI_KillPercent					= 100;						// The percent amount of AI that need to be killed for "killPercent" mission requirement (NOT IMPLEMENTED)
 
