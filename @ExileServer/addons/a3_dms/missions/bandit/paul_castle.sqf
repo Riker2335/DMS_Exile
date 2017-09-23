@@ -136,7 +136,7 @@ _baseObjs =
 
 //create possible vehicle list
 _PossibleVehicleClass 		= [
-								"CUP_O_BTR90_RU",
+								"CUP_O_BTR90_HQ_RU",
 								"CUP_B_BMP2_CZ",
 								"O_APC_Tracked_02_cannon_F",
 								"I_APC_Wheeled_03_cannon_F",
