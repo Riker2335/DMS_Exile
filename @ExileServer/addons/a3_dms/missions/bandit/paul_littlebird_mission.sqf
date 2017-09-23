@@ -155,7 +155,11 @@ _PossibleVehicleClass 		= [
 								"Exile_Chopper_Hummingbird_Civillian_Sunset",
 								"Exile_Chopper_Hummingbird_Civillian_Vrana",
 								"Exile_Chopper_Hummingbird_Civillian_Wasp",
-								"Exile_Chopper_Hummingbird_Civillian_Wave"
+								"Exile_Chopper_Hummingbird_Civillian_Wave",
+								"CUP_B_MH6J_USA",
+								"B_Heli_Light_01_F",
+								"B_Heli_Light_01_dynamicLoadout_F",
+								"B_Heli_Light_01_stripped_F"
 							];
 //choose the vehicle
 _VehicleClass = selectRandom _PossibleVehicleClass;
