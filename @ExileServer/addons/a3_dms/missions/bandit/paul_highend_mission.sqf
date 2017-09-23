@@ -146,7 +146,7 @@ _VehicleClass = selectRandom _PossibleVehicleClass;
 if (_difficulty isEqualTo "easy") then
 {
 	_vehicle = [_VehicleClass,[(_pos select 0) -15, (_pos select 1) -15, 0]] call DMS_fnc_SpawnNonPersistentVehicle;
-	_msgWIN = ['#0080ff',"Convicts killed everyone and made off with the heli."];
+	_msgWIN = ['#0080ff',"Convicts killed everyone and made off with the Dingo."];
 }
 else
 {
