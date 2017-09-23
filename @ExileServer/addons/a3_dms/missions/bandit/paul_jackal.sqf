@@ -139,8 +139,8 @@ _baseObjs =
 
 //create possible vehicle list
 _PossibleVehicleClass 		= [
-								"CUP_BAF_Jackal2_GMG_D",
-								"CUP_BAF_Jackal2_GMG_W"
+								"CUP_B_Jackal2_L2A1_GB_D",
+								"CUP_B_Jackal2_L2A1_GB_W"
 							];
 //choose the vehicle
 _VehicleClass = selectRandom _PossibleVehicleClass;
